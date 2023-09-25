@@ -1,0 +1,19 @@
+body {
+	background-color: lightblue;
+}
+
+.bouton {
+	background-color: #0074d9;/*Couleur de fond*/
+	color:#fff;/*Couleur du texte*/
+	border: none;/*Pas de bordure*/
+	border-radius: 5px;/*Coins arrondis*/
+	padding: 10px 20px;/*Espace intérieur du bouton*/
+	text-align: center;/*Alignement du texte au centre*/
+	margin: 10px;/*Marge extérieure pour espacer les bouttons*/
+	cursor: pointer;/*Curseur de souris pointer au survol*/
+	transition: color 0.3s ease;/*Changement de couleur au survol*/
+	width: 150px; 
+}
+.bouton:hover {
+	color: #ff4136;
+}
