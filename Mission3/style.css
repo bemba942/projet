@@ -20,3 +20,6 @@ background-color: #ddd;
 .bouton:hover {
 	color: #ff4136;
 }
+fieldset{
+	background-color: lightgreen;
+}
