@@ -18,7 +18,7 @@
 	</fieldset>
 	<fieldset> 
 	<legend> Question 2</legend>
-	<p> Quelle est votre marque préferer ?</p>
+	<p> Quelle est la marque préferer de l'equipe du PSG ?</p>
 
 	<input type="checkbox" name="q2" value="Nike"> <label>Nike</label>
 	<input type="checkbox" name="q2" value="Adidas"> <label>Adidas</label>
@@ -106,5 +106,55 @@
 	<button type="reset" class="bouton">Effacer</button>
 </form>
 	<button type="reset" class="bouton"><a href="page_correction.html">Correction</a></button>
+	<button type="button" onclick="corrigerQCM()">Résultat</button>
+
+ <center>
+    <div id="resultat"></div>
+
+    <script>
+       
+        function corrigerQCM() {
+            const formulaire = document.getElementById("qcmForm");
+            const resultat = document.getElementById("resultat");
+            let score = 0;
+
+         
+            if (formulaire.q1.value === "Paris") {
+                score++;
+            }
+            if (formulaire.q2.value === "Nike") {
+                score++;
+            }
+            if (formulaire.q3.value === "Le mafé") {
+                score++;
+            }
+            if (formulaire.q4.value === "Oui") {
+                score++;
+            }
+            if (formulaire.q5.value === "Madrid") {
+                score++;
+            }
+            if (formulaire.q6.value === "Messi") {
+                score++;
+            }
+            if (formulaire.q7.value === "4") {
+                score++;
+            }
+            if (formulaire.q8.value === "50") {
+                score++;
+            }
+            if (formulaire.q9.value === "1914-1918","1939-1945") {
+                score++;
+            }
+            if (formulaire.q10.value === "hello") {
+                score++;
+            }
+
+
+           
+            resultat.innerHTML = `Votre score : ${score} / 10`;
+
+        }
+    </script>
 </body>
 </html>
