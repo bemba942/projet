@@ -1,0 +1,86 @@
+body{ background-color: lightblue; }
+section.s1
+{
+background-color: lightgreen;
+	height: 500px;
+	width: 800px;
+	margin: 10px;
+	border-radius: 30px;
+	float: left;
+	clear: both;
+}
+
+div.d1{
+	background-color: lightgreen;
+	height: 300px;
+	width: 250px;
+	margin: 10px;
+	border-radius: 30px;
+ }
+
+ div.d3{
+	background-color: lightgreen;
+	height: 350px;
+	width: 250px;
+	margin: 10px;
+	border: solid;
+	border-color: red;
+	border-radius: 30px;
+	float: left;
+
+	}
+div.d4{
+	background-color: lightgreen;
+	height: 400px;
+	width: 250px;
+	margin: 10px;
+	border: solid;
+	border-color: red;
+	border-radius: 30px;
+	float: left;
+
+	}
+	div.dstage
+ {
+ 	background-color: lightgreen;
+	height: 60px;
+	width: 80px;
+	margin: 10px;
+	border: solid;
+	border-color: red;
+	border-radius: 10px;
+	float: left;
+ }
+
+	section.s2{
+		background-color: lightgreen;
+	height: 250px;
+	width: 500px;
+	margin: 10px;
+	border-radius: 30px;
+	float: left;
+	
+	}
+	section.s3
+{
+background-color: lightgreen;
+	height: 600px;
+	width: 500px;
+	margin: 10px;
+	border-radius: 30px;
+	float: left;
+	
+}
+	
+div.d7
+{
+background-color: lightgreen;
+	height: 10px;
+	width: 600px;
+	margin: 10px;
+	border-radius: 30px;
+	float: left;
+	clear: both;
+
+	
+}
