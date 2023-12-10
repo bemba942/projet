@@ -1,159 +1,356 @@
-body{
-  padding: 0;
-  margin: 0;
-
-
-  font-family: Verdana, Calibri, sans-serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center bottom;
-  background-image: url(img.gif);
-  background-size: 100%
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("img.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
 }
 
-
-nav{
-  width: 100%;
-  background-color: #424558;
+nav {
+    width: 100%;
+    height: 100%;
+    background-color: #424558;
+    position: relative;
+}
+nav > ul {
+    margin: 0px;
+    padding: 0px;
 }
 
-
-.menu-mobile{
-  display: none;
+nav li {
+    list-style-type: none;
+}
+ 
+nav > ul > li {
+    float: left;
+    position: relative;
 }
 
-
-nav input[type=checkbox]{
-  display: none;
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #424558;
 }
 
-
-nav > ul{
-  padding: 0;
-  margin: 0;
+nav input[type=checkbox] {
+    display: none;
 }
 
-
-nav > ul::after{
-  content: "";
-  display: table;
-  clear: both;
+.menu-mobile {
+    display: none;
 }
 
-
-nav > ul > li{
-  float: left;
-  position: relative;
+nav > ul::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-
-nav li{
-  list-style-type: none;
+nav a {
+    display: inline-block;
+    text-decoration: none;
 }
 
-
-.menu-html .submenu{
-  background-color: rgb(230, 100, 40);
+nav > ul > li > a {
+    padding: 20px 30px;
+    color: #FFF;
 }
-
-
-.menu-css .submenu{
-  background-color: rgb(000, 160, 240);
-}
-
-
-.menu-js .submenu{
-  background-color: rgb(251, 216, 99);
-}
-
-
-.submenu{
-  display: none;
-}
-
-
-.submenu li{
-  border-bottom: 1px solid #ccc;
-}
-
-
-.submenu li a{
-  padding: 15px 30px;
-  font-size: 13px;
-  color: #222538;
-  width: 270px;
-}
-
-
-nav a{
-  display: inline-block;
-  text-decoration: none;
-}
-
-
-nav > ul > li > a{
-  padding: 20px 30px;
-  color: #fff;
-}
-
-
-.menu-html:hover{
-  border-top: 5px solid #e44d26;
-  background-color: rgba(228, 77, 38, 0.15);
-}
-
-
-.menu-html .submenu li:hover{
-  background-color: rgba(210, 77, 60);
-}
-
-
-.menu-css:hover{
-  border-top: 5px solid #0070bb;
-  background-color: rgba(000, 112, 192, 0.15);
-}
-
-
-.menu-css .submenu li:hover{
-  background-color: rgba(000, 115, 200);
-}
-
-
-.menu-js:hover{
-  border-top: 5px solid #f1dc4f;
-  background-color: rgba(241, 211, 79, 0.15);
-}
-
-
-.menu-js .submenu li:hover{
-  background-color: rgba(200, 165, 75);
-}
-
-
-.menu-contact:hover{
-  border-top: 5px solid #bbb;
-  background-color: rgba(220, 220, 220, 0.15);
-}
-
-
-nav > ul > li:hover a{
-  padding: 15px 30px 20px 30px;
-}
-
 
 nav li:hover .submenu{
-  display: inline-block;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  padding: 0px;
-  z-index: 100000;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 100000;
+}
+
+.submenu li {
+    border-bottom: 1px solid #CCC;
+    list-style-type: none;
+    display: block;
+    position: relative;
+}
+
+.submenu li a {
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px;
+    display: inline-block;
+    font-size: 13px;
+    color: #FFF;
+    text-decoration: none;
+    width: 270px;
+}
+
+.menu-html:hover {
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
+
+.menu-js:hover {
+    border-top: 5px solid #f1dc4f;
+    background-color: RGBa(241, 211, 79, 0.15);
+}
+
+.menu-bd:hover {
+    border-top: 5px solid #b12aff;
+    background-color: RGBa(156, 39, 245, 0.15)
+}
+
+.menu-conception:hover {
+    border-top: 5px solid #6a2aff;
+    background-color: RGBa(106, 42, 255, 0.15)
+}
+
+.menu-php:hover {
+    border-top: 5px solid #e426e1;
+    background-color: RGBa(245, 39, 245, 0.15)
+}
+
+.menu-mission:hover {
+    border-top: 5px solid #0070bb;
+    background-color: RGBa(000, 112, 192, 0.15);
+}
+
+.menu-certification:hover {
+    border-top: 5px solid #2bedb9;
+    background-color: RGBa(39, 245, 215, 0.15);
+}
+
+nav > ul > li:hover a {
+    padding: 15px 30px 20px 30px;
+}
+
+.menu-html .submenu .subsubmenu {
+    background-color: rgb(230, 100, 40);
+}
+
+.menu-html .submenu {
+    background-color: rgb(230, 100, 40);
+}
+
+.menu-js .submenu .subsubmenu {
+    background-color: rgb(251, 216, 99);
+}
+
+.menu-js .submenu {
+    background-color: rgb(251, 216, 99);
+}
+
+.menu-bd .submenu .subsubmenu {
+    background-color: rgb(156, 39, 245)
+}
+
+.menu-bd .submenu {
+    background-color: rgb(156, 39, 245)
+}
+
+.menu-conception .submenu .subsubmenu {
+    background-color: rgb(106, 42, 255);
+}
+
+.menu-conception .submenu {
+    background-color: rgb(106, 42, 255);
 }
 
 
-.submenu li:hover a{
-  color: #eee;
-  font-weight: bold;
+.menu-php .submenu .subsubmenu {
+    background-color: rgb(238, 39, 245)
 }
+
+.menu-php .submenu {
+    background-color: rgb(238, 39, 245)
+}
+
+.menu-mission .submenu .subsubmenu {
+    background-color: rgb(000, 160, 240);
+}
+
+.menu-mission .submenu {
+    background-color: rgb(000, 160, 240);
+}
+
+.menu-certification .submenu .subsubmenu {
+    background-color: rgb(39, 245, 211);
+}
+
+.menu-certification .submenu {
+    background-color: rgb(39, 245, 211);
+}
+
+.submenu li:hover a {
+    color: #EEE;
+    font-weight: bold;
+}
+
+.menu-html .submenu li:hover {
+    background-color: RGB(210, 77, 60);
+}
+
+.menu-js .submenu li:hover {
+    background-color: rgb(200, 165, 75);
+}
+
+.menu-bd .submenu li:hover {
+    background-color: rgb(121, 29, 191);
+}
+
+.menu-conception .submenu li:hover {
+    background-color: rgb(90, 35, 219);
+}
+
+.menu-php .submenu li:hover {
+    background-color: rgb(181, 29, 186)
+}
+
+.menu-mission .submenu li:hover {
+    background-color: rgb(000, 115, 200);
+}
+
+.menu-certification .submenu li:hover {
+    background-color: rgb(28, 182, 184);
+}
+
+.menu-mobile {
+    display: none;
+}
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+nav input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+
+nav > ul > li:hover .submenu {
+    display: block;
+}
+
+.submenu .subsubmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #424558;
+    padding: 0px;
+}
+
+.submenu .subsubmenu li {
+    list-style-type: none;
+    display: block;
+}
+
+.submenu .subsubmenu li a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #FFF;
+    text-decoration: none;
+    width: 270px;
+    text-align: left;
+}
+
+.submenu li:hover .subsubmenu {
+    display: block;
+}
+
+
+nav > ul > li:hover .submenu {
+    display: block;
+}
+
+@media screen and (max-width: 888px) {
+    .menu-mobile {
+        display: block;
+        color: #FFF;
+        background-color: #424558;
+        text-align: center;
+        padding: 12px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    nav ul {
+        display: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    nav ul li,
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a,
+    nav ul li:hover a {
+        padding: 10px 0px 10px 0px;
+    }
+
+    nav ul li:hover .submenu {
+        display: block;
+        position: static;
+    }
+
+    nav ul li .submenu li:hover .subsubmenu {
+        display: block;
+    }
+    
+    nav li:hover .submenu {
+        display: block;
+        position: static;
+    }
+
+    .submenu li:hover .subsubmenu {
+        display: block;
+        position: static;
+    }
+
+    .titre {
+        font-size: 11px;
+        width: 90%;
+        margin-top: 250px;
+    }
+
+    .titre h1 {
+        font-size: 14px;
+    }
+}
+
+.titre {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(255, 255, 255, 0.7); 
+    text-align: center;
+    padding: 20px;
+    color: #000; 
+    font-size: 24px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+}
+
+.titre h1 {
+    font-size: 36px; 
+    margin: 0; 
+}
+
+.titre p {
+    margin: 0; 
+}
+
+
 
 
