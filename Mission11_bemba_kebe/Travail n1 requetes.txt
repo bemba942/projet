@@ -1,0 +1,94 @@
+ -- Afficher toutes les informations sur les véhicules loués par le client n° T122
+SELECT *
+FROM a_loue
+JOIN Vehicule ON a_loue.Id_Vehicule = Vehicule.Id_Vehicule
+WHERE a_loue.Id_Client = (SELECT Id_Client FROM Client WHERE Nom = 'T122');
+
+-- Afficher toutes les locations réalisées par le client n° T122
+SELECT *
+FROM a_loue
+WHERE Id_Client = (SELECT Id_Client FROM Client WHERE Nom = 'T122');
+
+-- Afficher l’immatriculation, l’âge et l’état de tous les véhicules
+SELECT Immatriculation, Age, Etat
+FROM Vehicule;
+
+-- Afficher les noms des clients et les adresses des clients qui habitent à 'Nice'
+SELECT Nom, Adresse
+FROM Client
+WHERE Ville = 'Nice';
+
+-- Affiche la liste des clients par ordre alphabétique croissant des noms
+SELECT *
+FROM Client
+ORDER BY Nom ASC;
+
+-- Via une requête SQL, ajouter l’attribut kilométrage
+ALTER TABLE Vehicule
+ADD Kilometrage Int;
+
+-- Afficher la liste des voitures par ordre décroissant des compteurs (kilométrage)
+SELECT *
+FROM Vehicule
+ORDER BY Kilometrage DESC;
+
+-- Afficher les informations sur les clients qui ont loué la voiture EW 25 EW
+SELECT *
+FROM Client
+WHERE Id_Client IN (SELECT Id_Client FROM a_loue WHERE Id_Vehicule IN (SELECT Id_Vehicule FROM Vehicule WHERE Immatriculation = 'EW 25 EW'));
+
+-- Afficher toutes les voitures noires
+SELECT *
+FROM Vehicule
+WHERE Couleur = 'Noir';
+
+-- Afficher toutes les voitures ayant un kilométrage <10000 km
+SELECT *
+FROM Vehicule
+WHERE Kilometrage < 10000;
+
+-- Afficher toutes les informations sur les locations réalisées avant 2018
+SELECT *
+FROM a_loue
+WHERE YEAR(Date_de_retait) < 2018;
+
+-- Afficher la moyenne des kilométrages de tous les véhicules du parc
+SELECT AVG(Kilometrage) AS MoyenneKilometrage
+FROM Vehicule;
+
+-- Afficher toutes les locations réalisées en 2018
+SELECT *
+FROM a_loue
+WHERE YEAR(Date_de_retait) = 2018;
+
+-- Afficher le nombre de voitures ayant un kilométrage <10 000 kilomètres
+SELECT COUNT(*)
+FROM Vehicule
+WHERE Kilometrage < 10000;
+
+-- Obtenir la liste des véhicules empruntés et rendus le même jour
+SELECT *
+FROM a_loue
+WHERE Date_de_retait = Date_de_retour;
+
+-- Obtenir le nombre de véhicules pour chaque marque
+SELECT Marque.Nom AS NomMarque, COUNT(*) AS NombreVehicules
+FROM Vehicule
+JOIN Marque ON Vehicule.Id_marque = Marque.Id_marque
+GROUP BY Marque.Nom;
+
+-- Obtenir les noms des clients qui ont loué plus de 10 véhicules de marque «Renault»
+SELECT Client.Nom AS NomClient, COUNT(*) AS NombreLocations
+FROM Client
+JOIN a_loue ON Client.Id_Client = a_loue.Id_Client
+JOIN Vehicule ON a_loue.Id_Vehicule = Vehicule.Id_Vehicule
+JOIN Marque ON Vehicule.Id_marque = Marque.Id_marque
+WHERE Marque.Nom = 'Renault'
+GROUP BY Client.Nom
+HAVING NombreLocations > 10;
+
+-- Obtenir le nombre d’agences et d’employés par pays
+SELECT Pays.Nom AS NomPays, COUNT(DISTINCT Agence.Id_Agence) AS NombreAgences, SUM(Agence.Nb_employes) AS NombreEmployes
+FROM Pays
+JOIN Agence ON Pays.Id_Pays = Agence.Id_Pays
+GROUP BY Pays.Nom;
