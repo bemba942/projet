@@ -2,79 +2,59 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Portfolio - Bemba Kebe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <header id="banniere">
+        <h1>Bemba Kebe</h1>
+        <p>Étudiant en BTS SIO - SLAM</p>
+    </header>
 
-    <div id="banniere">
-        <center><h2>Bannière</h2></center>
+    <section id="presentation">
+        <h2>Présentation</h2>
+        <p>Je suis actuellement en première année de BTS SIO spécialisé en SLAM au Lycée du Parc Vilgénis à Massy.</p>
+        <p>Diplômé d'un Baccalauréat Technologique.</p>
+    </section>
 
-    </div>
-    <div id= "Presentation">
-     <center><p><h1>Présentation</h1></p>
-     <p>Bemba KEBE 18 ans</p>
-     <p><h2>Je suis actuellement en première année de BTS SIO spécialisé en SLAM au Lycée du parc Vilgenis à Massy et je suis diplômer d'un Bacclauréat Technologie</h2></p>
-     </center> 
-
-    </div>
-
-
-    <div id="principal">
-    <p>Menu</p>
-    <div id="menu">
-
-        <ul class="niveau1">
-            <li><a href="./tp5.2/index.html">Accueil</a></li>
-            <li class="sousmenu"><a href="#">CV</a>
-                            <ul class="niveau2">
-                                <li><a href="CV.pdf">CV pdf</a></li>
-                                <li><a href="./Mision4/cv.html">CV html</a></li>
-                                 
-                            </ul>
-                <li class="sousmenu"><a href="#">Projets</a>
-                    <ul class="niveau2">
-                        <li class="sousmenu"><a href="#">Stage</a>
-                            <ul class="niveau3">
-                                <li><a href="#">Stage de première année</a></li>
-                                <li><a href="#">Stage de deuxième année</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">PPE</a></li>
-                        <li class="sousmenu"><a href="#">TP</a>
-                            <ul class="niveau3">
-                                <li><a href="#" target="affichage">TP1</a></li>
-                                <li><a href="#" target="affichage">TP2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sousmenu"><a href="#">Veille</a>
-                    <ul class="niveau2">
-                        <li><a href="#" target="affichage">Veille technologique</a></li>
-                        <li><a href="#">Veille Juridique</a></li>
-                    </ul>
-                </li>
-                <li><a href="./tp4.2/index.html">Contact</a></li>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li class="sousmenu">
+                <a href="#">CV</a>
+                <ul class="submenu">
+                    <li><a href="CV.pdf">CV PDF</a></li>
+                    <li><a href="cv.html">CV HTML</a></li>
+                </ul>
+            </li>
+            <li class="sousmenu">
+                <a href="#">Projets</a>
+                <ul class="submenu">
+                    <li><a href="#">Stage</a></li>
+                    <li><a href="#">PPE</a></li>
+                    <li><a href="#">TP</a></li>
+                </ul>
+            </li>
+            <li class="sousmenu">
+                <a href="#">Veille</a>
+                <ul class="submenu">
+                    <li><a href="#">Technologique</a></li>
+                    <li><a href="#">Juridique</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
         </ul>
-        
-    </li>
-    </div>
+    </nav>
 
-    </div>
-    <div id="iframe">
-    <iframe src="" width="800px" height="500px" name="f2"></iframe>
-    </div>
+    <section id="iframe">
+        <iframe src="" width="80%" height="400px" name="affichage"></iframe>
+    </section>
 
-<footer>
-  <center> <h2>Pieds de page</h2> </center>
-</footer>
+    <footer>
+        <p>© 2025 Bemba Kebe - Portfolio</p>
+    </footer>
 
 </body>
-
-
-
 </html>
