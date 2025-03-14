@@ -7,59 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Bannière -->
-    <header id="banniere">
-        <h1>Bemba Kebe</h1>
-        <p>Étudiant en BTS SIO - SLAM</p>
+    <header>
+        <div class="container">
+            <h1>Bemba Kebe</h1>
+            <p>Étudiant en BTS SIO - SLAM</p>
+            <nav>
+                <ul>
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Section Présentation -->
-    <section id="presentation">
-        <h2>Présentation</h2>
-        <p>Je suis actuellement en première année de BTS SIO spécialisé en SLAM au Lycée du Parc Vilgénis à Massy.</p>
-        <p>Diplômé d'un Baccalauréat Technologique.</p>
+    <section id="presentation" class="section">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>Je suis étudiant en BTS SIO option SLAM, passionné par l'informatique et motivé pour apprendre et progresser dans ce domaine.</p>
+        </div>
     </section>
 
-    <!-- Menu de Navigation -->
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li class="sousmenu">
-                <a href="#">CV</a>
-                <ul class="submenu">
-                    <li><a href="CV.pdf">CV PDF</a></li>
-                    <li><a href="cv.html">CV HTML</a></li>
-                </ul>
-            </li>
-            <li class="sousmenu">
-                <a href="#">Projets</a>
-                <ul class="submenu">
-                    <li><a href="kebe_bemba_2sioslam.pdf">Stage</a></li>
-                    <li><a href="#">PPE</a></li>
-                    <li><a href="#">TP</a></li>
-                </ul>
-            </li>
-            <li class="sousmenu">
-                <a href="#">Veille</a>
-                <ul class="submenu">
-                    <li><a href="#">Technologique</a></li>
-                    <li><a href="#">Juridique</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Zone d'affichage Iframe -->
-    <section id="iframe">
-        <iframe src="" width="80%" height="400px" name="affichage"></iframe>
+    <section id="cv" class="section">
+        <div class="container">
+            <h2>Mon CV</h2>
+            <a href="CV.pdf" class="btn">Télécharger mon CV</a>
+        </div>
     </section>
 
-    <!-- Pied de Page -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <ul>
+                <li>Application de gestion de tâches (C# WPF)</li>
+                <li>Site web pour restaurant</li>
+                <li>Projet de cybersécurité avec Laravel</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email : bembakebe106@gmail.com</p>
+            <p>Téléphone : 07 69 96 15 48</p>
+            <p>
+                <a href="https://linkedin.com" class="btn">LinkedIn</a>
+            </p>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 Bemba Kebe - Portfolio</p>
+        <p>© 2025 Bemba Kebe - Tous droits réservés</p>
     </footer>
-
 </body>
 </html>
